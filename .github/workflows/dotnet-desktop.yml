@@ -76,3 +76,14 @@ jobs:
     # Execute all unit tests in the solution
     - name: Execute unit tests
       run: dotnet test
+      
+    # Build 
+    - name: build
+      run: dotnet build -c Release
+      
+    # update a Build Artifact
+    - name: upload
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        name: scan
+        path: ${workflow}/bin/Release
