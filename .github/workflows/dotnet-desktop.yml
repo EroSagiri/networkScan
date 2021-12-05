@@ -82,3 +82,4 @@ jobs:
       with:
         name: scan
         path: ${{ github.workspace }}/bin/Release
+        
